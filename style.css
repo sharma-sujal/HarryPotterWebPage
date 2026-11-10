@@ -1,0 +1,307 @@
+* {
+    padding: 0px;
+    font-family: "Cinzel", serif;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+body {
+    background: linear-gradient(#370617, #03071e);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(5, 9, 31, 0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #bb9457;
+    display: flex;
+    background-color: #03071e;
+    padding: 14px 25px;
+    justify-content: space-between;
+    background-color: rgba(5, 9, 31, 0.85);
+
+}
+
+#main-logo {
+    width: 120px;
+
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    color: #bb9457;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    padding: 12px;
+}
+
+#home {
+    font-weight: bold;
+    color: #faa307;
+}
+
+.sec-a {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("images/bgi3.gif");
+    background-size: cover;
+
+}
+
+video {
+    border-radius: 18px;
+    width: 900px;
+    border: 4px solid black;
+    box-shadow:
+        0 0 3px #ff5f09,
+        0 0 10px #d4af6a,
+        0 0 15px rgba(212, 175, 106, 0.4);
+}
+
+.sec-b {
+    display: flex;
+    color: #d4af6a;
+    justify-content: space-around;
+    padding: 20px;
+    margin: 0px 30px;
+    gap: 40px;
+
+}
+
+.sec-b2 {
+
+    padding: 50px;
+    font-size: x-large;
+    color: #ad6506;
+    border-radius: 6px;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: none;
+    padding: 10px;
+}
+
+h2 {
+    font-weight: bolder;
+    font-size: xxx-large;
+    color: #faa307;
+    text-align: center;
+    padding: 25px;
+
+}
+
+p {
+    text-align: start;
+
+}
+
+input {
+    padding: 20px;
+    width: 400px;
+    background-color: #22040e;
+    border: 1px solid rgb(173, 127, 12);
+    margin-bottom: 20px;
+    border-radius: 6px;
+    font-size: large;
+    color: #ad6506;
+}
+
+::placeholder {
+    color: #774504;
+    font-size: large;
+}
+
+input:focus {
+    border: 2px solid rgb(173, 127, 12);
+    box-shadow:
+        0 0 5px rgb(255, 158, 47),
+        0 0 10px rgb(233, 176, 31),
+        0 0 5px red;
+    background-color: #310721;
+    color: #ad6506;
+    font-size: large;
+    font-weight: bold;
+}
+
+
+input:hover {
+    cursor: pointer;
+}
+
+button {
+    padding: 15px;
+    border-radius: 6px;
+    border: 0.5px solid goldenrod;
+    margin-top: 15px;
+    background-color: #ad6506;
+    font-size: large;
+    font-weight: bold;
+    color: #03071e;
+}
+
+span {
+    font-weight: bold;
+    color: #ca5211;
+}
+
+.sec-c {
+    margin: 7%;
+    flex-basis: 50%;
+    display: flex;
+    height: 100%;
+    border-radius: 7px;
+    justify-content: space-evenly;
+
+}
+
+.sec-c div {
+    padding: 3rem;
+    flex-basis: 50%;
+    display: flex;
+    color: #bb9457;
+    align-items: center;
+    font-size: larger;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 3rem;
+    background-blend-mode: darken;
+
+
+}
+
+/* audio {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    pointer-events: none;/
+} */
+
+h4 {
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.sec-c img {
+    width: 25%;
+    height: 25%;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 7px;
+    box-shadow: 0 0 10px goldenrod,
+        0 0 15px rgb(255, 0, 0),
+        0 0 20px orange;
+    transition: transform 0.4s ease-in-out;
+
+}
+
+.sec-c img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgb(140, 100, 0),
+        0 0 15px rgb(144, 1, 1),
+        0 0 20px orange;
+    border: solid 1px black;
+}
+
+.sec-d {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Centers the alignment globally */
+
+    background-image: url("/images/hat.gif");
+    width: 100%;
+    height: 650px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* 1. This wrapper shields the text frame and ensures it never clips */
+.text-wrapper {
+    display: block;
+    width: auto;
+    white-space: nowrap;
+    /* Prevents text from breaking into two lines */
+    overflow: visible;
+    /* Prevents letter clipping entirely */
+}
+
+.reveal-text {
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    margin: 0;
+    display: inline-block;
+
+    /* 2. Link the animation directly to the viewport scroll progress */
+    animation: magic-stretch linear forwards;
+    animation-timeline: view();
+
+    /* 3. Starts stretching as it enters view and finishes midway up the page */
+    animation-range: entry 15% cover 50%;
+}
+
+/* The magic expansion animation */
+@keyframes magic-stretch {
+    from {
+        opacity: 0;
+        /* Drastically squishes the spaces between letters to look compressed inside the hat */
+        letter-spacing: -25px;
+        /* Tightly narrows the character shapes safely without layout breakage */
+        font-stretch: 50%;
+        filter: blur(5px);
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 1;
+        /* Restores normal, beautiful tracking space */
+        letter-spacing: 4px;
+        font-stretch: 100%;
+        filter: blur(0px);
+    }
+}
+
+/* .houses {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    padding: 75px;
+    overflow: hidden;
+} */
+
+.house-img {
+    padding: 10px;
+    height: 300px;
+    width: 200px;
+    overflow: hidden;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out;
+
+}
+
+.house-img:hover {
+    transform: scale(1.1);
+
+}
+
+.houses {
+    padding: 75px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    justify-items: center;
+}
