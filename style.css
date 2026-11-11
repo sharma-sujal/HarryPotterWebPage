@@ -305,3 +305,272 @@ h4 {
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     justify-items: center;
 }
+
+.grid-use {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 10px;
+    height: 600px;
+    width: 450px;
+    padding: 50px;
+    gap: 1rem;
+}
+
+.grid-use1 {
+    background-image: url("/images/grf1.jpg");
+    background-size: cover;
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.grid-use2 {
+    background-image: url("/images/grf2.jpg");
+    background-size: cover;
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.grid-use3 {
+    background-image: url("/images/grf3.jpg");
+    background-size: cover;
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.gryf-house {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.gryf-house p {
+    flex: 0 0 50%;
+    color: #bb9457;
+    padding: 50px;
+    font-size: x-large;
+}
+
+.Gryffindor {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    color: #d4af6a;
+    font-size: larger;
+}
+
+.complex-grid {
+    display: grid;
+    padding: 20px;
+    gap: 16px;
+    width: 710px;
+    height: 450px;
+    box-sizing: border-box;
+
+    grid-template-columns: 0.9fr 1.25fr 1fr;
+    grid-template-rows: 1fr 0.55fr 1fr;
+}
+
+.complex-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#itm1 {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    position: relative;
+}
+
+#itm1::before {
+    position: absolute;
+    background-color: #22040e;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    opacity: 0;
+    transition: 0.3s ease;
+
+    text-align: center;
+    padding-top: 100px;
+
+}
+
+#itm1:hover::before {
+    opacity: 0.8;
+    content: "Lion Scarf";
+    filter: brightness(1);
+}
+
+#itm4 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+
+}
+
+#itm3 {
+    grid-column: 3/4;
+    grid-row: 1/4;
+}
+
+#itm2 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+#itm5 {
+    grid-column: 2/3;
+    grid-row: 2/4;
+}
+
+/* responsive design */
+@media screen and (max-width:750px) {
+    \
+ body {
+        width: 33rem;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .sec-a,
+    video {
+        width: 32rem;
+        height: auto;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .sec-b {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+    }
+
+    .sec-b2 p {
+        text-align: justify;
+    }
+
+    .sec-c {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    #platform-img {
+        width: 250px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sec-d {
+        display: flex;
+        width: 32em;
+
+    }
+
+
+    .text-wrapper {
+        display: block;
+        width: 100%;
+        max-width: 31rem;
+        white-space: normal;
+        overflow: hidden;
+    }
+
+    .reveal-text {
+        font-size: clamp(1.5rem, 6vw, 3rem);
+        color: white;
+        text-align: center;
+        margin: 0;
+        display: inline-block;
+
+        max-width: 100%;
+        overflow-wrap: anywhere;
+
+        animation: magic-stretch linear forwards;
+        animation-timeline: view();
+        animation-range: entry 15% cover 50%;
+    }
+
+    @keyframes magic-stretch {
+        from {
+            opacity: 0;
+            letter-spacing: -0.5rem;
+            filter: blur(5px);
+        }
+
+        30% {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 1;
+            letter-spacing: clamp(1px, 0.3vw, 4px);
+            filter: blur(0);
+        }
+    }
+
+    .Gryffindor {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gryf-house {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gryf-house p {
+        padding: 100px;
+        text-align: justify;
+    }
+
+    .grid-use1 {
+        background-image: url("/images/grf1.jpg");
+        background-size: cover;
+        background-position: center;
+        grid-column: span 1;
+        grid-row: span 2;
+        min-width: 0;
+        min-height: 0;
+    }
+
+    .grid-use2 {
+        background-image: url("/images/grf2.jpg");
+        background-size: cover;
+        background-position: center;
+        grid-column: span 1;
+        grid-row: span 1;
+        min-width: 0;
+        min-height: 0;
+    }
+
+    .grid-use3 {
+        background-image: url("/images/grf3.jpg");
+        background-size: cover;
+        background-position: center;
+        grid-column: span 1;
+        grid-row: span 1;
+        min-width: 0;
+        min-height: 0;
+    }
+
+}
