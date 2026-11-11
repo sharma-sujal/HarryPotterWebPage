@@ -97,7 +97,7 @@ form {
     display: flex;
     flex-direction: column;
     background-color: none;
-    padding: 10px;
+    padding: 50px;
 }
 
 h2 {
@@ -115,8 +115,9 @@ p {
 }
 
 input {
-    padding: 20px;
-    width: 400px;
+    padding: 18px;
+    width: 100%;
+    max-width: 400px;
     background-color: #22040e;
     border: 1px solid rgb(173, 127, 12);
     margin-bottom: 20px;
