@@ -430,7 +430,7 @@ h4 {
 }
 
 /* responsive design */
-@media screen and (max-width:750px) {
+@media screen and (max-width:450px) {
     \
  body {
         width: 33rem;
