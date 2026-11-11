@@ -115,7 +115,7 @@ p {
 }
 
 input {
-    padding: 18px;
+    padding: 18px 200px;
     width: 100%;
     max-width: 400px;
     background-color: #22040e;
