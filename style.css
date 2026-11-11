@@ -116,8 +116,7 @@ p {
 
 input {
     padding: 18px;
-    max-width: 400px;
-    min-width: 150px;
+    width: 400px;
     background-color: #22040e;
     border: 1px solid rgb(173, 127, 12);
     margin-bottom: 20px;
@@ -573,6 +572,28 @@ h4 {
         grid-row: span 1;
         min-width: 0;
         min-height: 0;
+    }
+
+    button {
+        padding: 15px;
+        border-radius: 6px;
+        border: 0.5px solid goldenrod;
+        margin-top: 15px;
+        background-color: #ad6506;
+        font-size: medium;
+        font-weight: bold;
+        color: #03071e;
+    }
+
+    input {
+        padding: 18px;
+        width: 200px;
+        background-color: #22040e;
+        border: 1px solid rgb(173, 127, 12);
+        margin-bottom: 20px;
+        border-radius: 6px;
+        font-size: large;
+        color: #ad6506;
     }
 
 }
